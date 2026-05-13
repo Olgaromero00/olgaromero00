@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="resta()">-</button>
+    <span id="contador">0</span>
+    <button onclick="suma()">+</button>
+    <script>
+        let colores = ["white", "blue", "red", "green", "yellow", "black","purple","pink"];
+        function resta() {
+            let contador = document.getElementById("contador");
+            let valor = parseInt(contador.innerText)
+            if (valor > 0) {
+                valor--
+                contador.innerText = valor;
+                contador.style.backgroundColor = colores[valor];
+            }
+
+        }
+        function suma() {
+            let contador = document.getElementById("contador");
+            let valor =parseInt(contador.innerText)
+            if (valor < colores.length -1){
+                valor++
+                contador.innerText =valor;
+                contador.style.backgroundColor = colores[valor];
+            }
+        }
+    </script>
+</body>
+
+</html>
