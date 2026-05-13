@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="boton" onclick="cambiaColor()">Pulsa!!!</button>
+    <p>Tu color es <span id="color">COLOR</span></p>
+    <script>
+        let colores = ["black", "blue", "red", "green", "yellow"];
+        function cambiaColor(){
+            let aleatorio=Math.floor(Math.random()*10)
+            let color=document.getElementById("color")
+            if (aleatorio < colores.length){
+                color.innerText=colores [aleatorio]
+                color.style.color=colores[aleatorio]
+            }
+            else {
+                color.innerHTML="<a href='https://google.com'>pincha aqui</a> " 
+                color.style.color="black"
+            }
+        }
+    </script>
+</body>
+
+</html>
